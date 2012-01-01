@@ -8,7 +8,7 @@
   targetNamespace="http://www.talkbank.org/ns/talkbank" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
   jaxb:version="2.1" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
   jaxb:extensionBindingPrefixes="xjc" xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  elementFormDefault="qualified" version="1.9.3" id="Talkbank">
+  elementFormDefault="qualified" version="1.9.5" id="Talkbank">
 
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
     schemaLocation="http://www.w3.org/2001/xml.xsd"/>
@@ -3708,7 +3708,7 @@
     <xs:restriction base="xs:string">
       <xs:enumeration value="breathy voice">
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-          <xs:documentation>&#x03BE;</xs:documentation>
+          <xs:documentation>&#x264B;</xs:documentation>
           <xs:documentation>
             <a href="http://childes.psy.cmu.edu/manuals/chat.html#Creaky_Delimiter">CHAT manual
               section on this topic...</a>
