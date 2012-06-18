@@ -8,7 +8,7 @@
   targetNamespace="http://www.talkbank.org/ns/talkbank" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
   jaxb:version="2.1" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
   jaxb:extensionBindingPrefixes="xjc" xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  elementFormDefault="qualified" version="1.9.8" id="Talkbank">
+  elementFormDefault="qualified" version="1.9.9" id="Talkbank">
 
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
     schemaLocation="http://www.w3.org/2001/xml.xsd"/>
@@ -1630,52 +1630,6 @@
         </xs:annotation>
 
         <xs:restriction base="xs:string">
-          <!-- Items without content -->
-          <xs:enumeration value="unintelligible-word">
-            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-              <xs:documentation>xx</xs:documentation>
-              <xs:documentation>
-                <a href="http://childes.psy.cmu.edu/manuals/chat.html#UnintelligibleSpeech_Code"
-                  >CHAT manual section on this topic...</a>
-              </xs:documentation>
-            </xs:annotation>
-          </xs:enumeration>
-          <xs:enumeration value="unintelligible">
-            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-              <xs:documentation>xxx</xs:documentation>
-              <xs:documentation>
-                <a href="http://childes.psy.cmu.edu/manuals/chat.html#UnintelligibleSpeech_Code"
-                  >CHAT manual section on this topic...</a>
-              </xs:documentation>
-            </xs:annotation>
-          </xs:enumeration>
-          <xs:enumeration value="unintelligible-word-with-pho">
-            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-              <xs:documentation>yy</xs:documentation>
-              <xs:documentation>
-                <a href="http://childes.psy.cmu.edu/manuals/chat.html#PhonologicalCoding_Code">CHAT
-                  manual section on this topic...</a>
-              </xs:documentation>
-            </xs:annotation>
-          </xs:enumeration>
-          <xs:enumeration value="unintelligible-with-pho">
-            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-              <xs:documentation>yyy</xs:documentation>
-              <xs:documentation>
-                <a href="http://childes.psy.cmu.edu/manuals/chat.html#PhonologicalCoding_Code">CHAT
-                  manual section on this topic...</a>
-              </xs:documentation>
-            </xs:annotation>
-          </xs:enumeration>
-          <xs:enumeration value="untranscribed">
-            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-              <xs:documentation>www</xs:documentation>
-              <xs:documentation>
-                <a href="http://childes.psy.cmu.edu/manuals/chat.html#UntranscribedMaterial_Code"
-                  >CHAT manual section on this topic...</a>
-              </xs:documentation>
-            </xs:annotation>
-          </xs:enumeration>
           <xs:enumeration value="action">
             <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
               <xs:documentation>0</xs:documentation>
@@ -1716,6 +1670,45 @@
         </xs:restriction>
       </xs:simpleType>
     </xs:attribute>
+
+    <xs:attribute name="untranscribed">
+      <xs:simpleType>
+        <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+          <xs:documentation>Mark as untranscribed non-word.</xs:documentation>
+        </xs:annotation>
+
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="unintelligible">
+            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+              <xs:documentation>xxx</xs:documentation>
+              <xs:documentation>
+                <a href="http://childes.psy.cmu.edu/manuals/chat.html#UnintelligibleSpeech_Code"
+                  >CHAT manual section on this topic...</a>
+              </xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="unintelligible-with-pho">
+            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+              <xs:documentation>yyy</xs:documentation>
+              <xs:documentation>
+                <a href="http://childes.psy.cmu.edu/manuals/chat.html#PhonologicalCoding_Code">CHAT
+                  manual section on this topic...</a>
+              </xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="untranscribed">
+            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+              <xs:documentation>www</xs:documentation>
+              <xs:documentation>
+                <a href="http://childes.psy.cmu.edu/manuals/chat.html#UntranscribedMaterial_Code"
+                  >CHAT manual section on this topic...</a>
+              </xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+
   </xs:complexType>
 
 
