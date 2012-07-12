@@ -978,6 +978,21 @@
     </xs:attribute>
   </xs:complexType>
 
+  <xs:complexType name="morQuotationType" mixed="false">
+    <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+      <xs:documentation>A quotation begin or end on %mor line.</xs:documentation>
+      <xs:documentation>
+        <a href="http://childes.psy.cmu.edu/manuals/chat.html#MorphologicalQuotation">CHAT manual
+          section on this topic...</a>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="empty">
+        <xs:attribute name="type" type="beginEndType" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
   <xs:complexType name="morTagMarkerType" mixed="false">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>A tag marker on %mor line.</xs:documentation>
@@ -1025,6 +1040,7 @@
   <xs:element name="tagMarker" type="tagMarkerType"/>
 
   <xs:element name="morTagMarker" type="morTagMarkerType"/>
+  <xs:element name="morQuotation" type="morQuotationType"/>
 
   <xs:complexType name="eventType" mixed="false">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
@@ -1126,6 +1142,7 @@
       <xs:choice>
         <xs:element ref="stem"/>
         <xs:element ref="morTagMarker"/>
+        <xs:element ref="morQuotation"/>
       </xs:choice>
 
       <!-- TODO suffix-->
@@ -3915,17 +3932,17 @@
 
   <xs:element name="quotation">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-      <xs:documentation> [&quot;]; quoted material. </xs:documentation>
+      <xs:documentation>Begin or end quoted material; &#x201C; and &#x201D;</xs:documentation>
       <xs:documentation>
-        <a href="http://childes.psy.cmu.edu/manuals/chat.html#Quotation_Scope">CHAT manual section
+        <a href="http://childes.psy.cmu.edu/manuals/chat.html#Quotation">CHAT manual section
           on this topic...</a>
       </xs:documentation>
     </xs:annotation>
     <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="g"/>
-        <xs:element ref="mor" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+	<xs:element ref="mor"/>
       </xs:sequence>
+      <xs:attribute name="type" type="beginEndType" use="required"/>
     </xs:complexType>
   </xs:element>
 
