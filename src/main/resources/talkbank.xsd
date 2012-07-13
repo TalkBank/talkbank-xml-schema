@@ -8,7 +8,7 @@
   targetNamespace="http://www.talkbank.org/ns/talkbank" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
   jaxb:version="2.1" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
   jaxb:extensionBindingPrefixes="xjc" xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  elementFormDefault="qualified" version="2.0.0" id="Talkbank">
+  elementFormDefault="qualified" version="2.0.1" id="Talkbank">
 
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
     schemaLocation="http://www.w3.org/2001/xml.xsd"/>
@@ -978,69 +978,7 @@
     </xs:attribute>
   </xs:complexType>
 
-  <xs:complexType name="morQuotationType" mixed="false">
-    <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-      <xs:documentation>A quotation begin or end on %mor line.</xs:documentation>
-      <xs:documentation>
-        <a href="http://childes.psy.cmu.edu/manuals/chat.html#MorphologicalQuotation">CHAT manual
-          section on this topic...</a>
-      </xs:documentation>
-    </xs:annotation>
-    <xs:simpleContent>
-      <xs:extension base="empty">
-        <xs:attribute name="type" type="beginEndType" use="required"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
-
-  <xs:complexType name="morTagMarkerType" mixed="false">
-    <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-      <xs:documentation>A tag marker on %mor line.</xs:documentation>
-      <xs:documentation>
-        <a href="http://childes.psy.cmu.edu/manuals/chat.html#MorphologicalTagMarker">CHAT manual
-          section on this topic...</a>
-      </xs:documentation>
-    </xs:annotation>
-    <xs:attribute name="type" use="required">
-      <xs:simpleType>
-        <xs:restriction base="xs:string">
-          <xs:enumeration value="comma">
-            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-              <xs:documentation>&#x201E;</xs:documentation>
-              <xs:documentation>
-                <a href="http://childes.psy.cmu.edu/manuals/chat.html#MorphologicalTagMarker_Comma"
-                  >CHAT manual section on this topic...</a>
-              </xs:documentation>
-            </xs:annotation>
-          </xs:enumeration>
-          <xs:enumeration value="tag">
-            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-              <xs:documentation>&#x201E;</xs:documentation>
-              <xs:documentation>
-                <a href="http://childes.psy.cmu.edu/manuals/chat.html#MorphologicalTagMarker_Tag"
-                  >CHAT manual section on this topic...</a>
-              </xs:documentation>
-            </xs:annotation>
-          </xs:enumeration>
-          <xs:enumeration value="vocative">
-            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-              <xs:documentation>&#x2021;</xs:documentation>
-              <xs:documentation>
-                <a
-                  href="http://childes.psy.cmu.edu/manuals/chat.html#MorphologicalTagMarker_Vocative"
-                  >CHAT manual section on this topic...</a>
-              </xs:documentation>
-            </xs:annotation>
-          </xs:enumeration>
-        </xs:restriction>
-      </xs:simpleType>
-    </xs:attribute>
-  </xs:complexType>
-
   <xs:element name="tagMarker" type="tagMarkerType"/>
-
-  <xs:element name="morTagMarker" type="morTagMarkerType"/>
-  <xs:element name="morQuotation" type="morQuotationType"/>
 
   <xs:complexType name="eventType" mixed="false">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
@@ -1139,11 +1077,7 @@
 
       <xs:element ref="pos"/>
 
-      <xs:choice>
-        <xs:element ref="stem"/>
-        <xs:element ref="morTagMarker"/>
-        <xs:element ref="morQuotation"/>
-      </xs:choice>
+      <xs:element ref="stem"/>
 
       <!-- TODO suffix-->
       <xs:element ref="mk" minOccurs="0" maxOccurs="unbounded"/>
@@ -1279,6 +1213,7 @@
         <xs:element ref="pg"/>
         <xs:element ref="sg"/>
         <xs:element ref="quotation"/>
+        <xs:element ref="quotation2"/>
         <xs:element ref="pause"/>
 
         <xs:element ref="internal-media"/>
@@ -2619,6 +2554,7 @@
         <xs:element ref="w"/>
         <xs:element ref="g"/>
         <xs:element ref="quotation"/>
+        <xs:element ref="quotation2"/>
         <xs:element ref="pause"/>
 
         <xs:element ref="internal-media"/>
@@ -2667,6 +2603,7 @@
         <xs:element ref="w"/>
         <xs:element ref="g"/>
         <xs:element ref="quotation"/>
+        <xs:element ref="quotation2"/>
         <xs:element ref="pause"/>
 
         <xs:element ref="internal-media"/>
@@ -3094,6 +3031,7 @@
         <xs:element ref="pg"/>
         <xs:element ref="sg"/>
         <xs:element ref="quotation"/>
+        <xs:element ref="quotation2"/>
         <xs:element ref="pause"/>
 
         <xs:element ref="internal-media" minOccurs="0"/>
@@ -3935,6 +3873,22 @@
       <xs:documentation>Begin or end quoted material; &#x201C; and &#x201D;</xs:documentation>
       <xs:documentation>
         <a href="http://childes.psy.cmu.edu/manuals/chat.html#Quotation">CHAT manual section
+          on this topic...</a>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence minOccurs="0" maxOccurs="unbounded">
+	<xs:element ref="mor"/>
+      </xs:sequence>
+      <xs:attribute name="type" type="beginEndType" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="quotation2">
+    <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+      <xs:documentation>Second level of begin or end quoted material; &#x2018; and &#x2019;</xs:documentation>
+      <xs:documentation>
+        <a href="http://childes.psy.cmu.edu/manuals/chat.html#Quotation2">CHAT manual section
           on this topic...</a>
       </xs:documentation>
     </xs:annotation>
