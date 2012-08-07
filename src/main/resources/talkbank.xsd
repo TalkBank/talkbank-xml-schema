@@ -8,7 +8,7 @@
   targetNamespace="http://www.talkbank.org/ns/talkbank" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
   jaxb:version="2.1" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
   jaxb:extensionBindingPrefixes="xjc" xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  elementFormDefault="qualified" version="2.0.1" id="Talkbank">
+  elementFormDefault="qualified" version="2.0.2" id="Talkbank">
 
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
     schemaLocation="http://www.w3.org/2001/xml.xsd"/>
@@ -1381,6 +1381,15 @@
       </xs:annotation>
       <xs:simpleType>
         <xs:restriction base="xs:string">
+          <xs:enumeration value="addition">
+            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+              <xs:documentation>@a</xs:documentation>
+              <xs:documentation>
+                <a href="http://childes.psy.cmu.edu/manuals/chat.html#Addition_Marker">CHAT manual
+                  section on this topic...</a>
+              </xs:documentation>
+            </xs:annotation>
+          </xs:enumeration>
           <xs:enumeration value="babbling">
             <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
               <xs:documentation>@b</xs:documentation>
