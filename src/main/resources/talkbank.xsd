@@ -8,7 +8,7 @@
   targetNamespace="http://www.talkbank.org/ns/talkbank" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
   jaxb:version="2.1" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
   jaxb:extensionBindingPrefixes="xjc" xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  elementFormDefault="qualified" version="2.0.3" id="Talkbank">
+  elementFormDefault="qualified" version="2.0.4" id="Talkbank">
 
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
     schemaLocation="http://www.w3.org/2001/xml.xsd"/>
@@ -2638,10 +2638,10 @@
       </xs:choice>
 
       <!--
-	  Must have at least one of actual or model.
+	  Can optionally have one of actual or model.
 	  Order does not matter.
       -->
-      <xs:choice>
+      <xs:choice minOccurs="0">
         <xs:sequence>
           <xs:element ref="actual"/>
           <xs:element ref="model" minOccurs="0"/>
@@ -2656,7 +2656,7 @@
 
     </xs:sequence>
   </xs:complexType>
-  
+
   <xs:element name="ss">
     <xs:annotation>
       <xs:documentation>
@@ -2820,7 +2820,7 @@
       </xs:annotation>
     </xs:attribute>
 
-    <!-- 
+    <!--
       Each phone needs an id for reference in alignment.
       id is not an xs:ID to avoid having globally unique ids.  The constraint for this
       is found in the model and actual element declarations.
@@ -2831,7 +2831,7 @@
           elements cannot have the same id. </xs:documentation>
       </xs:annotation>
     </xs:attribute>
-    
+
     <xs:attribute name="hiatus" type="xs:boolean" use="optional">
       <xs:annotation>
         <xs:documentation>
