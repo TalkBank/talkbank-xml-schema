@@ -8,7 +8,7 @@
   targetNamespace="http://www.talkbank.org/ns/talkbank" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
   jaxb:version="2.1" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
   jaxb:extensionBindingPrefixes="xjc" xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  elementFormDefault="qualified" version="2.0.5" id="Talkbank">
+  elementFormDefault="qualified" version="2.1.0" id="Talkbank">
 
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
     schemaLocation="http://www.w3.org/2001/xml.xsd"/>
@@ -52,7 +52,7 @@
                 section on this topic...</a>
             </xs:documentation>
           </xs:annotation>
-          <xs:complexType>
+          <xs:complexType mixed="false">
             <xs:sequence>
               <xs:element name="participant" type="participantType" maxOccurs="unbounded"/>
             </xs:sequence>
@@ -77,7 +77,7 @@
                   on this topic...</a>
               </xs:documentation>
             </xs:annotation>
-            <xs:complexType>
+            <xs:complexType mixed="false">
               <xs:attribute name="label" type="xs:string" use="required">
                 <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
                   <xs:documentation> Label for a begin/end gem. </xs:documentation>
@@ -98,7 +98,7 @@
                   on this topic...</a>
               </xs:documentation>
             </xs:annotation>
-            <xs:complexType>
+            <xs:complexType mixed="false">
               <xs:attribute name="label" type="xs:string" use="required">
                 <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
                   <xs:documentation> Label for a begin/end gem. </xs:documentation>
@@ -121,7 +121,7 @@
                   on this topic...</a>
               </xs:documentation>
             </xs:annotation>
-            <xs:complexType>
+            <xs:complexType mixed="false">
               <xs:attribute name="label" type="nonemptyStringType" use="required">
                 <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
                   <xs:documentation> Label for a lazy gem. </xs:documentation>
@@ -138,16 +138,6 @@
         </xs:choice>
 
       </xs:sequence>
-
-      <xs:attribute name="Id" type="nonemptyStringType" use="required">
-        <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-          <xs:documentation> Id for transcript, usually derived from the file name. </xs:documentation>
-          <xs:documentation>
-            <a href="http://childes.psy.cmu.edu/manuals/chat.html#TranscriptId">CHAT manual section
-              on this topic...</a>
-          </xs:documentation>
-        </xs:annotation>
-      </xs:attribute>
 
       <xs:attribute name="Version" type="nonemptyStringType" use="required">
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
@@ -365,7 +355,7 @@
   </xs:complexType>
 
 
-  <xs:complexType name="shorteningType">
+  <xs:complexType name="shorteningType" mixed="false">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation> Unspoken segment in a word. </xs:documentation>
       <xs:documentation>
@@ -382,7 +372,7 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:complexType name="freecodeType">
+  <xs:complexType name="freecodeType" mixed="false">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation> Unscoped complex local events in the middle of an utterance. </xs:documentation>
       <xs:documentation>
@@ -397,7 +387,7 @@
 
   <xs:element name="freecode" type="freecodeType"/>
 
-  <xs:complexType name="postcodeType">
+  <xs:complexType name="postcodeType" mixed="false">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation> Code that can only occur at the end of an utterance. Currently arbitrary
         information, although there are some conventions. </xs:documentation>
@@ -716,6 +706,17 @@
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
+
+      <xs:enumeration value="EndTurn">
+        <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+          <xs:documentation> End Turn. </xs:documentation>
+          <xs:documentation>
+            <a href="http://childes.psy.cmu.edu/manuals/chat.html#EndTurn_Header">CHAT manual section
+              on this topic...</a>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
     </xs:restriction>
   </xs:simpleType>
 
@@ -1026,6 +1027,8 @@
           this topic...</a>
       </xs:documentation>
     </xs:annotation>
+
+    <xs:complexType mixed="false"/>
   </xs:element>
 
   <xs:element name="happening" type="nonemptyStringType">
@@ -1152,7 +1155,7 @@
     </xs:complexContent>
   </xs:complexType>
 
-  <xs:complexType name="morphemicBaseType">
+  <xs:complexType name="morphemicBaseType" mixed="false">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation> %mor unit of one-to-one correspondence with main line. A single word or a compound word or a terminator. </xs:documentation>
       <xs:documentation>
@@ -1191,7 +1194,7 @@
     </xs:annotation>
   </xs:element>
 
-  <xs:complexType name="morphemicCompoundWordType">
+  <xs:complexType name="morphemicCompoundWordType" mixed="false">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>a compound word in mor using +</xs:documentation>
       <xs:documentation>
@@ -1262,7 +1265,7 @@
       </xs:documentation>
     </xs:annotation>
 
-    <xs:complexType>
+    <xs:complexType mixed="false">
       <xs:choice>
         <xs:element name="single" type="languageType">
           <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
@@ -1619,28 +1622,9 @@
         </xs:annotation>
 
         <xs:restriction base="xs:string">
-          <xs:enumeration value="action">
-            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-              <xs:documentation>0</xs:documentation>
-              <xs:documentation>
-                <a href="http://childes.psy.cmu.edu/manuals/chat.html#UntranscribedMaterial_Code"
-                  >CHAT manual section on this topic...</a>
-              </xs:documentation>
-            </xs:annotation>
-          </xs:enumeration>
-
           <xs:enumeration value="omission">
             <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
               <xs:documentation>0word</xs:documentation>
-              <xs:documentation>
-                <a href="http://childes.psy.cmu.edu/manuals/chat.html#OmittedWord_Code">CHAT manual
-                  section on this topic...</a>
-              </xs:documentation>
-            </xs:annotation>
-          </xs:enumeration>
-          <xs:enumeration value="ellipsis">
-            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-              <xs:documentation>00word</xs:documentation>
               <xs:documentation>
                 <a href="http://childes.psy.cmu.edu/manuals/chat.html#OmittedWord_Code">CHAT manual
                   section on this topic...</a>
@@ -1799,7 +1783,7 @@
     </xs:annotation>
   </xs:element>
 
-  <xs:complexType name="mediaType">
+  <xs:complexType name="mediaType" mixed="false">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation> A pointer to a selection in the single video/audio file associated with the
         transcript. </xs:documentation>
@@ -1907,7 +1891,7 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:complexType name="morphemicPrefixType">
+  <xs:complexType name="morphemicPrefixType" mixed="false">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>word#</xs:documentation>
       <xs:documentation>
@@ -1920,7 +1904,7 @@
     </xs:simpleContent>
   </xs:complexType>
 
-  <xs:complexType name="morphemicTranslationType">
+  <xs:complexType name="morphemicTranslationType" mixed="false">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>=word (English translation)</xs:documentation>
       <xs:documentation>
@@ -2035,16 +2019,6 @@
       </xs:annotation>
     </xs:attribute>
 
-    <xs:attribute name="ageTo" type="xs:duration" use="optional">
-      <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-        <xs:documentation> Speaker's age, end of range during transcript. </xs:documentation>
-        <xs:documentation>
-          <a href="http://childes.psy.cmu.edu/manuals/chat.html#AgeTo_Field">CHAT manual section on
-            this topic...</a>
-        </xs:documentation>
-      </xs:annotation>
-    </xs:attribute>
-
     <xs:attribute name="group" type="nonemptyStringType" use="optional">
       <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
         <xs:documentation> Speaker's group. </xs:documentation>
@@ -2139,7 +2113,7 @@
   </xs:complexType>
 
 
-  <xs:complexType name="prosodyType">
+  <xs:complexType name="prosodyType" mixed="false">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>Prosody: stress, blocking etc.</xs:documentation>
       <xs:documentation>
@@ -2503,7 +2477,7 @@
     </xs:attribute>
   </xs:complexType>
 
-  <xs:complexType name="terminatorType">
+  <xs:complexType name="terminatorType" mixed="false">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation> Main line terminator with optional %mor information. </xs:documentation>
       <xs:documentation>
@@ -2601,7 +2575,7 @@
       </xs:documentation>
     </xs:annotation>
 
-    <xs:complexType>
+    <xs:complexType mixed="false">
       <xs:simpleContent>
         <xs:extension base="nonemptyStringType"/>
       </xs:simpleContent>
@@ -2683,13 +2657,13 @@
     </xs:restriction>
   </xs:simpleType>
 
-  <xs:complexType name="actualPhoType">
+  <xs:complexType name="actualPhoType" mixed="false">
     <xs:complexContent>
       <xs:extension base="phoType"/>
     </xs:complexContent>
   </xs:complexType>
 
-  <xs:complexType name="modelPhoType">
+  <xs:complexType name="modelPhoType" mixed="false">
     <xs:complexContent>
       <xs:extension base="phoType"/>
     </xs:complexContent>
@@ -3032,7 +3006,7 @@
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="speakerUtteranceType">
+  <xs:complexType name="speakerUtteranceType" mixed="false">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation> A single utterance, along with all dependent information. </xs:documentation>
       <xs:documentation>
@@ -3534,12 +3508,8 @@
           topic...</a>
       </xs:documentation>
     </xs:annotation>
-    <xs:complexType>
-      <xs:simpleContent>
-        <xs:extension base="empty">
-          <xs:attribute name="type" type="beginEndType" use="required"/>
-        </xs:extension>
-      </xs:simpleContent>
+    <xs:complexType mixed="false">
+        <xs:attribute name="type" type="beginEndType" use="required"/>
     </xs:complexType>
   </xs:element>
 
@@ -3551,12 +3521,8 @@
           topic...</a>
       </xs:documentation>
     </xs:annotation>
-    <xs:complexType>
-      <xs:simpleContent>
-        <xs:extension base="empty">
-          <xs:attribute name="type" type="beginEndType" use="required"/>
-        </xs:extension>
-      </xs:simpleContent>
+    <xs:complexType mixed="false">
+        <xs:attribute name="type" type="beginEndType" use="required"/>
     </xs:complexType>
   </xs:element>
 
@@ -3568,7 +3534,7 @@
           topic...</a>
       </xs:documentation>
     </xs:annotation>
-    <xs:complexType>
+    <xs:complexType mixed="false">
       <xs:simpleContent>
         <xs:extension base="nonemptyStringType">
           <xs:attribute name="type" type="beginEndType" use="required"/>
@@ -3585,7 +3551,7 @@
           section on this topic...</a>
       </xs:documentation>
     </xs:annotation>
-    <xs:complexType>
+    <xs:complexType mixed="false">
       <xs:simpleContent>
         <xs:extension base="nonemptyStringType">
           <xs:attribute name="type" type="beginEndSimpleType" use="required">
@@ -3866,7 +3832,7 @@
           section on this topic...</a>
       </xs:documentation>
     </xs:annotation>
-    <xs:complexType>
+    <xs:complexType mixed="false">
       <xs:sequence>
         <xs:element ref="w" minOccurs="1" maxOccurs="unbounded"/>
       </xs:sequence>
@@ -3895,7 +3861,7 @@
           on this topic...</a>
       </xs:documentation>
     </xs:annotation>
-    <xs:complexType>
+    <xs:complexType mixed="false">
       <xs:sequence minOccurs="0" maxOccurs="unbounded">
 	<xs:element ref="mor"/>
       </xs:sequence>
@@ -3911,7 +3877,7 @@
           on this topic...</a>
       </xs:documentation>
     </xs:annotation>
-    <xs:complexType>
+    <xs:complexType mixed="false">
       <xs:sequence minOccurs="0" maxOccurs="unbounded">
 	<xs:element ref="mor"/>
       </xs:sequence>
@@ -3981,6 +3947,16 @@
         </xs:annotation>
       </xs:enumeration>
 
+      <xs:enumeration value="num">
+        <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+          <xs:documentation> TODO </xs:documentation>
+          <xs:documentation>
+            <a href="http://childes.psy.cmu.edu/manuals/chat.html#Num_Option">CHAT manual section
+              on this topic...</a>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
       <xs:enumeration value="multi">
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation> Purely for the display purposes of CLAN, in order to have CLAN handle
@@ -4033,7 +4009,7 @@
     <xs:list itemType="optionType"/>
   </xs:simpleType>
 
-  <xs:complexType name="mediaPicType">
+  <xs:complexType name="mediaPicType" mixed="false">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>A reference to a graphics file.</xs:documentation>
       <xs:documentation>
@@ -4054,11 +4030,9 @@
           on this topic...</a>
       </xs:documentation>
     </xs:annotation>
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="w"/>
-      </xs:sequence>
+    <xs:complexType mixed="false">
       <xs:attribute name="who" type="speakerID" use="required"/>
+      <xs:attribute name="said" type="nonemptyStringType" use="required"/>
     </xs:complexType>
   </xs:element>
 
@@ -4109,7 +4083,7 @@
           on this topic...</a>
       </xs:documentation>
     </xs:annotation>
-    <xs:complexType>
+    <xs:complexType mixed="false">
       <xs:simpleContent>
         <xs:extension base="nonemptyStringType"/>
       </xs:simpleContent>
