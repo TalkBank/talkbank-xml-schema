@@ -3672,7 +3672,7 @@
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation>&#x2260;</xs:documentation>
           <xs:documentation>
-            <a href="http://childes.psy.cmu.edu/manuals/chat.html#BlockedSegments_Delimiter">CHAT manual section on this topic...</a>
+            <a href="http://childes.psy.cmu.edu/manuals/chat.html#Blocking_Marker">CHAT manual section on this topic...</a>
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
@@ -3716,7 +3716,7 @@
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation>&#x21AB;</xs:documentation>
           <xs:documentation>
-            <a href="http://childes.psy.cmu.edu/manuals/chat.html#InitialSegmentRepetition_Delimiter">CHAT manual section on this topic...</a>
+            <a href="http://childes.psy.cmu.edu/manuals/chat.html#Initial_Repetition">CHAT manual section on this topic...</a>
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
