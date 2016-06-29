@@ -8,7 +8,7 @@
   targetNamespace="http://www.talkbank.org/ns/talkbank" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
   jaxb:version="2.1" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
   jaxb:extensionBindingPrefixes="xjc" xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  elementFormDefault="qualified" version="2.1.0" id="Talkbank">
+  elementFormDefault="qualified" version="2.1.1" id="Talkbank">
 
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
     schemaLocation="http://www.w3.org/2001/xml.xsd"/>
@@ -66,9 +66,9 @@
           <xs:element ref="tcu"/>
 
           <!--
-	     TODO need constraints on all the gems in order
-	     to validate matching of begin and end
-	    -->
+             TODO need constraints on all the gems in order
+             to validate matching of begin and end
+            -->
           <xs:element name="begin-gem">
             <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
               <xs:documentation> Begin a gem (requires matching end of gem). </xs:documentation>
@@ -2612,8 +2612,8 @@
       </xs:choice>
 
       <!--
-	  Can optionally have one of actual or model.
-	  Order does not matter.
+          Can optionally have one of actual or model.
+          Order does not matter.
       -->
       <xs:choice minOccurs="0">
         <xs:sequence>
@@ -3601,80 +3601,88 @@
       <xs:enumeration value="constriction">
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation>&#x223E;</xs:documentation>
-	  <xs:documentation>
-	    <a href="http://childes.psy.cmu.edu/manuals/chat.html#Constriction_Element">CHAT manual section on this topic...</a>
-	  </xs:documentation>
+          <xs:documentation>
+            <a href="http://childes.psy.cmu.edu/manuals/chat.html#Constriction_Element">CHAT manual section on this topic...</a>
+          </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="inhalation">
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation>&#x2219;</xs:documentation>
-	  <xs:documentation>
-	    <a href="http://childes.psy.cmu.edu/manuals/chat.html#Inhalation_Element">CHAT manual section on this topic...</a>
-	  </xs:documentation>
+          <xs:documentation>
+            <a href="http://childes.psy.cmu.edu/manuals/chat.html#Inhalation_Element">CHAT manual section on this topic...</a>
+          </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="laugh in word">
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation>&#x1F29;</xs:documentation>
-	  <xs:documentation>
-	    <a href="http://childes.psy.cmu.edu/manuals/chat.html#LaughInWord_Element">CHAT manual section on this topic...</a>
-	  </xs:documentation>
+          <xs:documentation>
+            <a href="http://childes.psy.cmu.edu/manuals/chat.html#LaughInWord_Element">CHAT manual section on this topic...</a>
+          </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="pitch down">
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation>&#x2193;</xs:documentation>
-	  <xs:documentation>
-	    <a href="http://childes.psy.cmu.edu/manuals/chat.html#PitchDown_Element">CHAT manual section on this topic...</a>
-	  </xs:documentation>
+          <xs:documentation>
+            <a href="http://childes.psy.cmu.edu/manuals/chat.html#PitchDown_Element">CHAT manual section on this topic...</a>
+          </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="pitch reset">
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation>&#x21BB;</xs:documentation>
-	  <xs:documentation>
-	    <a href="http://childes.psy.cmu.edu/manuals/chat.html#PitchReset_Element">CHAT manual section on this topic...</a>
-	  </xs:documentation>
+          <xs:documentation>
+            <a href="http://childes.psy.cmu.edu/manuals/chat.html#PitchReset_Element">CHAT manual section on this topic...</a>
+          </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="pitch up">
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation>&#x2191;</xs:documentation>
-	  <xs:documentation>
-	    <a href="http://childes.psy.cmu.edu/manuals/chat.html#PitchUp_Element">CHAT manual section on this topic...</a>
-	  </xs:documentation>
+          <xs:documentation>
+            <a href="http://childes.psy.cmu.edu/manuals/chat.html#PitchUp_Element">CHAT manual section on this topic...</a>
+          </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="primary stress">
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation>&#x02C8;</xs:documentation>
-	  <xs:documentation>
-	    <a href="http://childes.psy.cmu.edu/manuals/chat.html#PrimaryStress_Element">CHAT manual section on this topic...</a>
-	  </xs:documentation>
+          <xs:documentation>
+            <a href="http://childes.psy.cmu.edu/manuals/chat.html#PrimaryStress_Element">CHAT manual section on this topic...</a>
+          </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="secondary stress">
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation>&#x02CC;</xs:documentation>
-	  <xs:documentation>
-	    <a href="http://childes.psy.cmu.edu/manuals/chat.html#SecondaryStress_Element">CHAT manual section on this topic...</a>
-	  </xs:documentation>
+          <xs:documentation>
+            <a href="http://childes.psy.cmu.edu/manuals/chat.html#SecondaryStress_Element">CHAT manual section on this topic...</a>
+          </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>
   </xs:simpleType>
 
-  <!-- Generated by generate-ca-delimiters.pl -->
+  <!-- Generated by generate-ca-delimiters.pl for talkbank.xsd -->
   <xs:simpleType name="ca-delimiter-type">
     <xs:restriction base="xs:string">
+      <xs:enumeration value="blocked segments">
+        <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+          <xs:documentation>&#x2260;</xs:documentation>
+          <xs:documentation>
+            <a href="http://childes.psy.cmu.edu/manuals/chat.html#BlockedSegments_Delimiter">CHAT manual section on this topic...</a>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
       <xs:enumeration value="breathy voice">
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation>&#x264B;</xs:documentation>
           <xs:documentation>
             <a href="http://childes.psy.cmu.edu/manuals/chat.html#Creaky_Delimiter">CHAT manual
               section on this topic...</a>
-	  </xs:documentation>
+          </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="creaky">
@@ -3701,6 +3709,14 @@
           <xs:documentation>
             <a href="http://childes.psy.cmu.edu/manuals/chat.html#HighPitch_Delimiter">CHAT manual
               section on this topic...</a>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="initial segment repetition">
+        <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+          <xs:documentation>&#x21AB;</xs:documentation>
+          <xs:documentation>
+            <a href="http://childes.psy.cmu.edu/manuals/chat.html#InitialSegmentRepetition_Delimiter">CHAT manual section on this topic...</a>
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
@@ -3838,13 +3854,13 @@
       </xs:sequence>
 
       <xs:attribute name="real" type="xs:boolean">
-	<xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-	  <xs:documentation>[:: word1 ...] indicates that the word was real and MOR should analyze it</xs:documentation>
-	  <xs:documentation>
-	    <a href="http://childes.psy.cmu.edu/manuals/chat.html#Replacement_Real">CHAT manual
+        <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+          <xs:documentation>[:: word1 ...] indicates that the word was real and MOR should analyze it</xs:documentation>
+          <xs:documentation>
+            <a href="http://childes.psy.cmu.edu/manuals/chat.html#Replacement_Real">CHAT manual
             section on this topic...</a>
-	  </xs:documentation>
-	</xs:annotation>
+          </xs:documentation>
+        </xs:annotation>
       </xs:attribute>
 
     </xs:complexType>
@@ -3863,7 +3879,7 @@
     </xs:annotation>
     <xs:complexType mixed="false">
       <xs:sequence minOccurs="0" maxOccurs="unbounded">
-	<xs:element ref="mor"/>
+        <xs:element ref="mor"/>
       </xs:sequence>
       <xs:attribute name="type" type="beginEndType" use="required"/>
     </xs:complexType>
@@ -3879,7 +3895,7 @@
     </xs:annotation>
     <xs:complexType mixed="false">
       <xs:sequence minOccurs="0" maxOccurs="unbounded">
-	<xs:element ref="mor"/>
+        <xs:element ref="mor"/>
       </xs:sequence>
       <xs:attribute name="type" type="beginEndType" use="required"/>
     </xs:complexType>
@@ -4114,10 +4130,10 @@
   <xs:simpleType name="roleType">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>
-	Allowable roles.
+        Allowable roles.
       </xs:documentation>
       <xs:documentation>
-	<a href="http://childes.psy.cmu.edu/manuals/chat.html#Role">CHAT manual section on this topic...</a>
+        <a href="http://childes.psy.cmu.edu/manuals/chat.html#Role">CHAT manual section on this topic...</a>
       </xs:documentation>
     </xs:annotation>
 
