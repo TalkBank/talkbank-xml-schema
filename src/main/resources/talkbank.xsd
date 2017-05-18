@@ -8,7 +8,7 @@
   targetNamespace="http://www.talkbank.org/ns/talkbank" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
   jaxb:version="2.1" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
   jaxb:extensionBindingPrefixes="xjc" xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  elementFormDefault="qualified" version="2.2.2" id="Talkbank">
+  elementFormDefault="qualified" version="2.3.0" id="Talkbank">
 
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
     schemaLocation="http://www.w3.org/2001/xml.xsd"/>
@@ -1339,6 +1339,7 @@
         <xs:element ref="p"/>
 
         <xs:element ref="long-feature"/>
+        <xs:element ref="segment-repetition"/>
 
         <!-- For CA -->
         <xs:element ref="ca-delimiter"/>
@@ -3609,6 +3610,18 @@
     </xs:complexType>
   </xs:element>
 
+  <xs:element name="segment-repetition">
+      <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+          <xs:documentation>&#x21AB;...&#x21AB;</xs:documentation>
+          <xs:documentation>
+              <a href="http://childes.psy.cmu.edu/manuals/chat.html#Initial_Repetition">CHAT manual section on this topic...</a>
+          </xs:documentation>
+      </xs:annotation>
+      <xs:complexType mixed="false">
+          <xs:attribute name="text" type="nonemptyStringType" use="required"/>
+      </xs:complexType>
+  </xs:element>
+
   <xs:element name="ca-element">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>CA subwords that must occur inside a word.</xs:documentation>
@@ -3736,14 +3749,6 @@
           <xs:documentation>
             <a href="http://childes.psy.cmu.edu/manuals/chat.html#HighPitch_Delimiter">CHAT manual
               section on this topic...</a>
-          </xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-      <xs:enumeration value="initial segment repetition">
-        <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-          <xs:documentation>&#x21AB;</xs:documentation>
-          <xs:documentation>
-            <a href="http://childes.psy.cmu.edu/manuals/chat.html#Initial_Repetition">CHAT manual section on this topic...</a>
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
