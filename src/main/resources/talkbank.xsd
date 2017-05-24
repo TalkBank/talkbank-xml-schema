@@ -1081,7 +1081,7 @@
       <xs:documentation> The unit of a %mor line corresponding to a single non-compound word on the
         main line. </xs:documentation>
       <xs:documentation>
-        <a href="http://talkbank.org/manuals/CHAT.html#Mor_Simple_Word">CHAT manual section
+        <a href="http://talkbank.org/manuals/MOR.html#Mor_Simple_Word">MOR manual section
           on this topic...</a>
       </xs:documentation>
     </xs:annotation>
@@ -1101,7 +1101,7 @@
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>%mor part of speech</xs:documentation>
       <xs:documentation>
-        <a href="http://talkbank.org/manuals/CHAT.html#Mor_POS">CHAT manual section on this
+        <a href="http://talkbank.org/manuals/MOR.html#Mor_POS">MOR manual section on this
           topic...</a>
       </xs:documentation>
     </xs:annotation>
@@ -1112,7 +1112,7 @@
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation>%mor POS subcategory</xs:documentation>
           <xs:documentation>
-            <a href="http://talkbank.org/manuals/CHAT.html#Mor_Subcategory">CHAT manual
+            <a href="http://talkbank.org/manuals/MOR.html#Mor_Subcategory">MOR manual
               section on this topic...</a>
           </xs:documentation>
         </xs:annotation>
@@ -1159,7 +1159,7 @@
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation> %mor unit of one-to-one correspondence with main line. A single word or a compound word or a terminator. </xs:documentation>
       <xs:documentation>
-        <a href="http://talkbank.org/manuals/CHAT.html#Morphological_Word">CHAT manual
+        <a href="http://talkbank.org/manuals/MOR.html#Morphological_Word">MOR manual
           section on this topic...</a>
       </xs:documentation>
     </xs:annotation>
@@ -1178,7 +1178,7 @@
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>mor preclitic</xs:documentation>
       <xs:documentation>
-        <a href="http://talkbank.org/manuals/CHAT.html#MorphologicalPreclitic">CHAT manual
+        <a href="http://talkbank.org/manuals/MOR.html#MorphologicalPreclitic">MOR manual
           section on this topic...</a>
       </xs:documentation>
     </xs:annotation>
@@ -1188,7 +1188,7 @@
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>mor postclitic</xs:documentation>
       <xs:documentation>
-        <a href="http://talkbank.org/manuals/CHAT.html#MorphologicalPostclitic">CHAT manual
+        <a href="http://talkbank.org/manuals/MOR.html#MorphologicalPostclitic">MOR manual
           section on this topic...</a>
       </xs:documentation>
     </xs:annotation>
@@ -1198,7 +1198,7 @@
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>a compound word in mor using +</xs:documentation>
       <xs:documentation>
-        <a href="http://talkbank.org/manuals/CHAT.html#MorphologicalCompound">CHAT manual
+        <a href="http://talkbank.org/manuals/MOR.html#MorphologicalCompound">MOR manual
           section on this topic...</a>
       </xs:documentation>
     </xs:annotation>
@@ -1923,7 +1923,7 @@
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>word#</xs:documentation>
       <xs:documentation>
-        <a href="http://talkbank.org/manuals/CHAT.html#Mor_Prefix">CHAT manual section on
+        <a href="http://talkbank.org/manuals/MOR.html#Mor_Prefix">MOR manual section on
           this topic...</a>
       </xs:documentation>
     </xs:annotation>
@@ -1936,7 +1936,7 @@
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>=word (English translation)</xs:documentation>
       <xs:documentation>
-        <a href="http://talkbank.org/manuals/CHAT.html#Mor_Translation">CHAT manual section
+        <a href="http://talkbank.org/manuals/MOR.html#Mor_Translation">MOR manual section
           on this topic...</a>
       </xs:documentation>
     </xs:annotation>
@@ -1949,7 +1949,7 @@
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>morphemes</xs:documentation>
       <xs:documentation>
-        <a href="http://talkbank.org/manuals/CHAT.html#Mor_Markers">CHAT manual section on
+        <a href="http://talkbank.org/manuals/MOR.html#Mor_Markers">MOR manual section on
           this topic...</a>
       </xs:documentation>
     </xs:annotation>
@@ -1962,7 +1962,7 @@
                 <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
                   <xs:documentation> suffix marker, CHAT equivalent is -suffix </xs:documentation>
                   <xs:documentation>
-                    <a href="http://talkbank.org/manuals/CHAT.html#Mor_Markers_Suffix">CHAT
+                    <a href="http://talkbank.org/manuals/MOR.html#Mor_Markers_Suffix">MOR
                       manual section on this topic...</a>
                   </xs:documentation>
                 </xs:annotation>
@@ -1972,8 +1972,8 @@
                   <xs:documentation> suffix fusion marker, CHAT equivalent is &amp;suffix </xs:documentation>
                   <xs:documentation>
                     <a
-                      href="http://talkbank.org/manuals/CHAT.html#Mor_Markers_Suffix_Fusional"
-                      >CHAT manual section on this topic...</a>
+                      href="http://talkbank.org/manuals/MOR.html#Mor_Markers_Suffix_Fusional"
+                      >MOR manual section on this topic...</a>
                   </xs:documentation>
                 </xs:annotation>
               </xs:enumeration>
@@ -1981,7 +1981,7 @@
                 <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
                   <xs:documentation> morphological category, CHAT equivalent is :suffix </xs:documentation>
                   <xs:documentation>
-                    <a href="http://talkbank.org/manuals/CHAT.html#Mor_Markers_Category">CHAT
+                    <a href="http://talkbank.org/manuals/MOR.html#Mor_Markers_Category">MOR
                       manual section on this topic...</a>
                   </xs:documentation>
                 </xs:annotation>
@@ -2513,7 +2513,7 @@
           this topic...</a>
       </xs:documentation>
       <xs:documentation>
-        <a href="http://talkbank.org/manuals/CHAT.html#Terminator_Alignment">CHAT manual
+        <a href="http://talkbank.org/manuals/MOR.html#Terminator_Alignment">MOR manual
           section on this topic...</a>
       </xs:documentation>
     </xs:annotation>
@@ -2532,7 +2532,7 @@
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>Terminator on %mor line, important for %gra.</xs:documentation>
       <xs:documentation>
-        <a href="http://talkbank.org/manuals/CHAT.html#Mor_Terminators">CHAT manual section
+        <a href="http://talkbank.org/manuals/MOR.html#Mor_Terminators">MOR manual section
           on this topic...</a>
       </xs:documentation>
     </xs:annotation>
@@ -2972,7 +2972,7 @@
             <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
               <xs:documentation>compound, CHAT +</xs:documentation>
               <xs:documentation>
-                <a href="http://talkbank.org/manuals/CHAT.html#SimpleCompound">CHAT manual
+                <a href="http://talkbank.org/manuals/MOR.html#SimpleCompound">MOR manual
                   section on this topic...</a>
               </xs:documentation>
             </xs:annotation>
@@ -2981,7 +2981,7 @@
             <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
               <xs:documentation>clitic, CHAT ~</xs:documentation>
               <xs:documentation>
-                <a href="http://talkbank.org/manuals/CHAT.html#Clitic_Compound">CHAT manual
+                <a href="http://talkbank.org/manuals/MOR.html#Clitic_Compound">MOR manual
                   section on this topic...</a>
               </xs:documentation>
             </xs:annotation>
@@ -4116,7 +4116,7 @@
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>Morphological category</xs:documentation>
       <xs:documentation>
-        <a href="http://talkbank.org/manuals/CHAT.html#MorphologicalCategory">CHAT manual
+        <a href="http://talkbank.org/manuals/MOR.html#MorphologicalCategory">MOR manual
           section on this topic...</a>
       </xs:documentation>
     </xs:annotation>
@@ -4126,7 +4126,7 @@
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>Morphological stem, alphanumeric</xs:documentation>
       <xs:documentation>
-        <a href="http://talkbank.org/manuals/CHAT.html#MorphologicalStem">CHAT manual section
+        <a href="http://talkbank.org/manuals/MOR.html#MorphologicalStem">MOR manual section
           on this topic...</a>
       </xs:documentation>
     </xs:annotation>
