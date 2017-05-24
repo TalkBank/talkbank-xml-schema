@@ -3612,9 +3612,9 @@
 
   <xs:element name="segment-repetition">
       <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-          <xs:documentation>&#x21AB;...&#x21AB;</xs:documentation>
+          <xs:documentation>&#x21AB;...&#x21AB; inside a word</xs:documentation>
           <xs:documentation>
-              <a href="http://talkbank.org/manuals/CHAT.html#Initial_Repetition">CHAT manual section on this topic...</a>
+              <a href="http://talkbank.org/manuals/CHAT.html#RepeatedSegment">CHAT manual section on this topic...</a>
           </xs:documentation>
       </xs:annotation>
       <xs:complexType mixed="false">
@@ -3978,7 +3978,7 @@
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation> Allows CA features and restriction relaxations, but does not automatically open CAFont. </xs:documentation>
           <xs:documentation>
-            <a href="http://talkbank.org/manuals/CHAT.html#CA_Unicode_Option">CHAT manual section
+            <a href="http://talkbank.org/manuals/CHAT.html#CA-Unicode_Option">CHAT manual section
               on this topic...</a>
           </xs:documentation>
         </xs:annotation>
