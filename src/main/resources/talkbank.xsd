@@ -937,7 +937,7 @@
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
       <xs:documentation>Tag marker, used in both main line and %mor.</xs:documentation>
       <xs:documentation>
-        <a href="http://talkbank.org/manuals/CHAT.html#Topic_Marker">CHAT manual section on
+        <a href="http://talkbank.org/manuals/CHAT.html#Satellite_Marker">CHAT manual section on
           this topic...</a>
       </xs:documentation>
     </xs:annotation>
