@@ -8,7 +8,7 @@
   targetNamespace="http://www.talkbank.org/ns/talkbank" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
   jaxb:version="2.1" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
   jaxb:extensionBindingPrefixes="xjc" xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  elementFormDefault="qualified" version="2.3.0" id="Talkbank">
+  elementFormDefault="qualified" version="2.4.0" id="Talkbank">
 
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
     schemaLocation="http://www.w3.org/2001/xml.xsd"/>
@@ -184,7 +184,7 @@
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation> The transcript may be associated with at most one media file. </xs:documentation>
           <xs:documentation>
-            <a href="http://talkbank.org/manuals/CHAT.html#Mediatypes">CHAT manual section on
+            <a href="http://talkbank.org/manuals/CHAT.html#Media_Types">CHAT manual section on
               this topic...</a>
           </xs:documentation>
         </xs:annotation>
@@ -702,16 +702,6 @@
           <xs:documentation> Page. </xs:documentation>
           <xs:documentation>
             <a href="http://talkbank.org/manuals/CHAT.html#Page_Header">CHAT manual section
-              on this topic...</a>
-          </xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-
-      <xs:enumeration value="EndTurn">
-        <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-          <xs:documentation> End Turn. </xs:documentation>
-          <xs:documentation>
-            <a href="http://talkbank.org/manuals/CHAT.html#EndTurn_Header">CHAT manual section
               on this topic...</a>
           </xs:documentation>
         </xs:annotation>
@@ -1536,15 +1526,6 @@
               <xs:documentation>
                 <a href="http://talkbank.org/manuals/CHAT.html#PCF_Marker">CHAT manual
                   section on this topic...</a>
-              </xs:documentation>
-            </xs:annotation>
-          </xs:enumeration>
-          <xs:enumeration value="proto-morpheme">
-            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-              <xs:documentation>@pm</xs:documentation>
-              <xs:documentation>
-                <a href="http://talkbank.org/manuals/CHAT.html#Protomorpheme_Marker">CHAT
-                  manual section on this topic...</a>
               </xs:documentation>
             </xs:annotation>
           </xs:enumeration>
@@ -4001,16 +3982,6 @@
           <xs:documentation>
             <a href="http://talkbank.org/manuals/CHAT.html#Heritage_Option">CHAT manual
               section on this topic...</a>
-          </xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-
-      <xs:enumeration value="num">
-        <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-          <xs:documentation> TODO </xs:documentation>
-          <xs:documentation>
-            <a href="http://talkbank.org/manuals/CHAT.html#Num_Option">CHAT manual section
-              on this topic...</a>
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
