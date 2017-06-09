@@ -832,7 +832,11 @@
             <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
               <xs:documentation>Start</xs:documentation>
               <xs:documentation>
-                <a href="http://talkbank.org/manuals/CHAT.html#CA_Overlaps">CHAT manual
+                <a href="http://talkbank.org/manuals/CHAT.html#TopBeginOverlap_Delimiter">CHAT manual
+                  section on this topic...</a>
+              </xs:documentation>
+              <xs:documentation>
+                <a href="http://talkbank.org/manuals/CHAT.html#BottomBeginOverlap_Delimiter">CHAT manual
                   section on this topic...</a>
               </xs:documentation>
             </xs:annotation>
@@ -841,7 +845,11 @@
             <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
               <xs:documentation>End</xs:documentation>
               <xs:documentation>
-                <a href="http://talkbank.org/manuals/CHAT.html#CA_Overlaps">CHAT manual
+                <a href="http://talkbank.org/manuals/CHAT.html#TopEndOverlap_Delimiter">CHAT manual
+                  section on this topic...</a>
+              </xs:documentation>
+              <xs:documentation>
+                <a href="http://talkbank.org/manuals/CHAT.html#BottomEndOverlap_Delimiter">CHAT manual
                   section on this topic...</a>
               </xs:documentation>
             </xs:annotation>
@@ -856,7 +864,11 @@
             <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
               <xs:documentation> The first of a set of overlaps. </xs:documentation>
               <xs:documentation>
-                <a href="http://talkbank.org/manuals/CHAT.html#CA_Overlaps">CHAT manual
+                <a href="http://talkbank.org/manuals/CHAT.html#TopBeginOverlap_Delimiter">CHAT manual
+                  section on this topic...</a>
+              </xs:documentation>
+              <xs:documentation>
+                <a href="http://talkbank.org/manuals/CHAT.html#TopEndOverlap_Delimiter">CHAT manual
                   section on this topic...</a>
               </xs:documentation>
             </xs:annotation>
@@ -865,7 +877,11 @@
             <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
               <xs:documentation> The second (or third, etc.) of a set of overlaps. </xs:documentation>
               <xs:documentation>
-                <a href="http://talkbank.org/manuals/CHAT.html#CA_Overlaps">CHAT manual
+                <a href="http://talkbank.org/manuals/CHAT.html#BottomBeginOverlap_Delimiter">CHAT manual
+                  section on this topic...</a>
+              </xs:documentation>
+              <xs:documentation>
+                <a href="http://talkbank.org/manuals/CHAT.html#BottomEndOverlap_Delimiter">CHAT manual
                   section on this topic...</a>
               </xs:documentation>
             </xs:annotation>
@@ -940,6 +956,10 @@
         <a href="http://talkbank.org/manuals/CHAT.html#Satellite_Marker">CHAT manual section on
           this topic...</a>
       </xs:documentation>
+      <xs:documentation>
+        <a href="http://talkbank.org/manuals/MOR.html#MorphologicalTagMarker">MOR manual section on
+          this topic...</a>
+      </xs:documentation>
     </xs:annotation>
     <xs:sequence minOccurs="0" maxOccurs="unbounded">
       <xs:element ref="mor"/>
@@ -963,6 +983,10 @@
                 <a href="http://talkbank.org/manuals/CHAT.html#Tag_Satellite_Marker">CHAT
                   manual section on this topic...</a>
               </xs:documentation>
+              <xs:documentation>
+                <a href="http://talkbank.org/manuals/MOR.html#MorphologicalTagMarker_Tag"
+                  >MOR manual section on this topic...</a>
+              </xs:documentation>
             </xs:annotation>
           </xs:enumeration>
           <xs:enumeration value="vocative">
@@ -971,6 +995,10 @@
               <xs:documentation>
                 <a href="http://talkbank.org/manuals/CHAT.html#Vocative_Satellite_Marker"
                   >CHAT manual section on this topic...</a>
+              </xs:documentation>
+              <xs:documentation>
+                <a href="http://talkbank.org/manuals/MOR.html#MorphologicalTagMarker_Vocative"
+                  >MOR manual section on this topic...</a>
               </xs:documentation>
             </xs:annotation>
           </xs:enumeration>
@@ -1130,6 +1158,10 @@
       <xs:documentation> A group of words in %mor or %trn. </xs:documentation>
       <xs:documentation>
         <a href="http://talkbank.org/manuals/CHAT.html#Morphological_Tier">CHAT manual
+          section on this topic...</a>
+      </xs:documentation>
+      <xs:documentation>
+        <a href="http://talkbank.org/manuals/CHAT.html#Training_Tier">CHAT manual
           section on this topic...</a>
       </xs:documentation>
     </xs:annotation>
