@@ -1141,9 +1141,13 @@
   <!-- TODO preliminary, without internal references -->
   <xs:complexType name="graType" mixed="false">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-      <xs:documentation>GRASP data for a single word</xs:documentation>
+      <xs:documentation>GRASP data for a single word in %gra or %grt</xs:documentation>
       <xs:documentation>
         <a href="http://talkbank.org/manuals/CHAT.html#GrammaticalRelations_Tier">CHAT manual
+          section on this topic...</a>
+      </xs:documentation>
+      <xs:documentation>
+        <a href="http://talkbank.org/manuals/CHAT.html#GrammaticalRelationsTraining_Tier">CHAT manual
           section on this topic...</a>
       </xs:documentation>
     </xs:annotation>
