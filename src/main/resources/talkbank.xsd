@@ -174,7 +174,7 @@
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation> The transcript may be associated with at most one media file. </xs:documentation>
           <xs:documentation>
-            <a href="https://talkbank.org/manuals/CHAT.html#Videos_Header">CHAT manual section on
+            <a href="https://talkbank.org/manuals/CHAT.html#VideosHeader">CHAT manual section on
               this topic...</a>
           </xs:documentation>
         </xs:annotation>
