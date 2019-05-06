@@ -8,7 +8,7 @@
   targetNamespace="http://www.talkbank.org/ns/talkbank" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
   jaxb:version="2.1" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
   jaxb:extensionBindingPrefixes="xjc" xmlns:xhtml="http://www.w3.org/1999/xhtml"
-  elementFormDefault="qualified" version="2.9.0" id="Talkbank">
+  elementFormDefault="qualified" version="2.10.0" id="Talkbank">
 
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
     schemaLocation="http://www.w3.org/2001/xml.xsd"/>
@@ -1499,15 +1499,6 @@
               <xs:documentation>@fp</xs:documentation>
               <xs:documentation>
                 <a href="https://talkbank.org/manuals/CHAT.html#FilledPause_Marker">CHAT
-                  manual section on this topic...</a>
-              </xs:documentation>
-            </xs:annotation>
-          </xs:enumeration>
-          <xs:enumeration value="filler syllable">
-            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-              <xs:documentation>@fs</xs:documentation>
-              <xs:documentation>
-                <a href="https://talkbank.org/manuals/CHAT.html#FillerSyllable_Marker">CHAT
                   manual section on this topic...</a>
               </xs:documentation>
             </xs:annotation>
