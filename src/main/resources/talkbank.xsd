@@ -3273,15 +3273,6 @@
           </xs:documentation>
         </xs:annotation>
       </xs:enumeration>
-      <xs:enumeration value="language">
-        <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-          <xs:documentation>%lan</xs:documentation>
-          <xs:documentation>
-            <a href="https://talkbank.org/manuals/CHAT.html#Language_Tier">CHAT manual section
-              on this topic...</a>
-          </xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
       <xs:enumeration value="orthography">
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation>%ort</xs:documentation>
