@@ -594,19 +594,6 @@
         </xs:annotation>
       </xs:enumeration>
 
-      <!-- TODO Should enforce -->
-      <xs:enumeration value="New Language">
-        <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-          <xs:documentation> Mark the beginning of a transcript-wide scope in which all material is
-            in the specified language (which must be a proper ISO code listed in the languages
-            header). </xs:documentation>
-          <xs:documentation>
-            <a href="https://talkbank.org/manuals/CHAT.html#New_Language_Header">CHAT manual
-              section on this topic...</a>
-          </xs:documentation>
-        </xs:annotation>
-      </xs:enumeration>
-
       <xs:enumeration value="Location">
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation> Location. </xs:documentation>
