@@ -9,7 +9,7 @@ xmlns:tb="http://www.talkbank.org/ns/talkbank" xmlns="http://www.talkbank.org/ns
 targetNamespace="http://www.talkbank.org/ns/talkbank" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
 jaxb:version="2.1" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
 jaxb:extensionBindingPrefixes="xjc" xmlns:xhtml="http://www.w3.org/1999/xhtml"
-elementFormDefault="qualified" version="2.12.0" id="Talkbank">
+elementFormDefault="qualified" version="2.13.0" id="Talkbank">
 
 <xs:import namespace="http://www.w3.org/XML/1998/namespace"
            schemaLocation="http://www.w3.org/2001/xml.xsd"/>
@@ -156,7 +156,7 @@ elementFormDefault="qualified" version="2.12.0" id="Talkbank">
             </xs:annotation>
         </xs:attribute>
 
-        <xs:attribute name="Date" type="xs:date" use="required">
+        <xs:attribute name="Date" type="xs:date" use="optional">
             <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
                 <xs:documentation> Date of transcription. Note that there can only be one date. A session
                 spread out over multiple dates must be split into multiple CHAT transcripts. </xs:documentation>
