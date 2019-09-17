@@ -9,7 +9,7 @@ xmlns:tb="http://www.talkbank.org/ns/talkbank" xmlns="http://www.talkbank.org/ns
 targetNamespace="http://www.talkbank.org/ns/talkbank" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
 jaxb:version="2.1" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
 jaxb:extensionBindingPrefixes="xjc" xmlns:xhtml="http://www.w3.org/1999/xhtml"
-elementFormDefault="qualified" version="2.13.0" id="Talkbank">
+elementFormDefault="qualified" version="2.14.0" id="Talkbank">
 
 <xs:import namespace="http://www.w3.org/XML/1998/namespace"
            schemaLocation="http://www.w3.org/2001/xml.xsd"/>
@@ -3893,21 +3893,6 @@ elementFormDefault="qualified" version="2.13.0" id="Talkbank">
 </xs:element>
 
 
-<xs:element name="blob">
-    <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-        <xs:documentation>Hack for CA heritage; unparsed text.</xs:documentation>
-        <xs:documentation>
-            <a href="https://talkbank.org/manuals/CHAT.html#Heritage_Option">CHAT manual section
-            on this topic...</a>
-        </xs:documentation>
-    </xs:annotation>
-    <xs:complexType mixed="false">
-        <xs:simpleContent>
-            <xs:extension base="nonemptyStringType"/>
-        </xs:simpleContent>
-    </xs:complexType>
-</xs:element>
-
 <xs:element name="a">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
         <xs:documentation> Dependent tier: scoped annotation that applies to a whole utterance. </xs:documentation>
@@ -3973,7 +3958,6 @@ elementFormDefault="qualified" version="2.13.0" id="Talkbank">
 
             <xs:choice maxOccurs="unbounded">
                 <xs:element ref="w"/>
-                <xs:element ref="blob"/>
                 <xs:element ref="g"/>
                 <xs:element ref="pg"/>
                 <xs:element ref="sg"/>
