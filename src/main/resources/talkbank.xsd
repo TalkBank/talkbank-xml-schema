@@ -4068,6 +4068,7 @@ elementFormDefault="qualified" version="2.14.0" id="Talkbank">
         <xs:enumeration value="Grandmother"/>
         <xs:enumeration value="Relative"/>
         <xs:enumeration value="Participant"/>
+        <xs:enumeration value="Therapist"/>
         <xs:enumeration value="Informant"/>
         <xs:enumeration value="Subject"/>
         <xs:enumeration value="Investigator"/>
