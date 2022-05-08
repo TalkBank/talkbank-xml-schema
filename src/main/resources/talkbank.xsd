@@ -3988,7 +3988,8 @@ elementFormDefault="qualified" version="2.16.0" id="Talkbank">
         </xs:documentation>
     </xs:annotation>
     <xs:complexType mixed="true">
-        <xs:attribute name="type" type="groupAnnotationTypeType"/>
+
+<xs:attribute name="type" type="groupAnnotationTypeType"/>
     </xs:complexType>
 </xs:element>
 
@@ -4100,7 +4101,7 @@ elementFormDefault="qualified" version="2.16.0" id="Talkbank">
             Allowable roles.
         </xs:documentation>
         <xs:documentation>
-            <a href="http://childes.psy.cmu.edu/manuals/chat.html#Role">CHAT manual section on this topic...</a>
+            <a href="http://childes.talkbank.org/manuals/chat.html#Role">CHAT manual section on this topic...</a>
         </xs:documentation>
     </xs:annotation>
 
