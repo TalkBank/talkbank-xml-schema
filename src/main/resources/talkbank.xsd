@@ -4036,6 +4036,7 @@ elementFormDefault="qualified" version="2.17.0" id="Talkbank">
                 <xs:element ref="error"/>
                 <xs:element ref="r"/>
                 <xs:element ref="a"/>
+                <xs:element ref="wor"/>
             </xs:choice>
         </xs:sequence>
 
@@ -4078,6 +4079,67 @@ elementFormDefault="qualified" version="2.17.0" id="Talkbank">
         </xs:attribute>
     </xs:complexType>
 </xs:element>
+
+
+<xs:element name="wor">
+    <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+        <xs:documentation> %wor dependent tier, similar to main tier. </xs:documentation>
+        <xs:documentation>
+            <a href="https://talkbank.org/manuals/CHAT.html#Wor_Tier">CHAT manual section on
+            this topic...</a>
+        </xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="false">
+        <xs:sequence>
+            <xs:element ref="linker" minOccurs="0" maxOccurs="unbounded"/>
+
+            <xs:choice maxOccurs="unbounded">
+                <xs:element ref="w"/>
+                <xs:element ref="g"/>
+                <xs:element ref="pg"/>
+                <xs:element ref="sg"/>
+                <xs:element ref="quotation"/>
+                <xs:element ref="pause"/>
+
+                <xs:element ref="internal-media" minOccurs="0"/>
+                <xs:element ref="freecode"/>
+                <xs:element ref="e"/>
+                <xs:element ref="s"/>
+                <xs:element ref="tagMarker"/>
+                <xs:element ref="overlap-point"/>
+                <xs:element ref="underline"/>
+                <xs:element ref="italic"/>
+                <xs:element ref="long-feature"/>
+                <xs:element ref="nonvocal"/>
+            </xs:choice>
+
+            <xs:element ref="t"/>
+            <xs:element ref="postcode" minOccurs="0" maxOccurs="unbounded"/>
+
+            <xs:element ref="media" minOccurs="0"/>
+
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="k"/>
+                <xs:element ref="error"/>
+                <xs:element ref="r"/>
+                <xs:element ref="a"/>
+            </xs:choice>
+        </xs:sequence>
+
+        <xs:attribute ref="xml:lang">
+            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+                <xs:documentation> The language the entire utterance is in (unless individual words'
+                languages are overridden explicitly). </xs:documentation>
+                <xs:documentation>
+                    <a href="https://talkbank.org/manuals/CHAT.html#Language_Precode">CHAT manual
+                    section on this topic...</a>
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+
+    </xs:complexType>
+</xs:element>
+
 
 
 <xs:simpleType name="languageType">
