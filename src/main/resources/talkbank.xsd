@@ -9,7 +9,7 @@ xmlns:tb="http://www.talkbank.org/ns/talkbank" xmlns="http://www.talkbank.org/ns
 targetNamespace="http://www.talkbank.org/ns/talkbank" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
 jaxb:version="2.1" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
 jaxb:extensionBindingPrefixes="xjc" xmlns:xhtml="http://www.w3.org/1999/xhtml"
-elementFormDefault="qualified" version="2.17.0" id="Talkbank">
+elementFormDefault="qualified" version="2.18.0" id="Talkbank">
 
 <xs:import namespace="http://www.w3.org/XML/1998/namespace"
            schemaLocation="http://www.w3.org/2001/xml.xsd"/>
@@ -189,7 +189,7 @@ elementFormDefault="qualified" version="2.17.0" id="Talkbank">
 
         <xs:attribute name="Media" type="mediaRefType">
             <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-                <xs:documentation> The transcript may be associated with at most one media file. </xs:documentation>
+                <xs:documentation> The transcript may be associated with at most one media URI. </xs:documentation>
                 <xs:documentation>
                     <a href="https://talkbank.org/manuals/CHAT.html#Media_Header">CHAT manual section
                     on this topic...</a>
@@ -732,8 +732,7 @@ elementFormDefault="qualified" version="2.17.0" id="Talkbank">
             this topic...</a>
         </xs:documentation>
     </xs:annotation>
-    <xs:restriction base="xs:string">
-        <xs:pattern value="[\p{L}\p{N}][-/_'.\p{L}\p{N}]*"/>
+    <xs:restriction base="xs:anyURI">
     </xs:restriction>
 </xs:simpleType>
 
