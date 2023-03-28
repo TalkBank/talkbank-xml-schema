@@ -3588,15 +3588,6 @@ elementFormDefault="qualified" version="2.20.0" id="Talkbank">
             </xs:annotation>
         </xs:enumeration>
 
-        <xs:enumeration value="notarget">
-            <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-                <xs:documentation> This option tells CHECK not to look for the presence of a Target_Child in the @Participants line. </xs:documentation>
-                <xs:documentation>
-                    <a href="https://talkbank.org/manuals/CHAT.html#Notarget_Option">CHAT manual section
-                    on this topic...</a>
-                </xs:documentation>
-            </xs:annotation>
-        </xs:enumeration>
     </xs:restriction>
 </xs:simpleType>
 
