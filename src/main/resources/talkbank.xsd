@@ -683,7 +683,6 @@ elementFormDefault="qualified" version="2.20.0" id="Talkbank">
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                 <xs:element ref="k"/>
                 <xs:element ref="error"/>
-                <xs:element ref="r"/>
                 <xs:element ref="overlap"/>
                 <xs:element ref="ga"/>
                 <xs:element ref="duration"/>
@@ -1230,20 +1229,6 @@ elementFormDefault="qualified" version="2.20.0" id="Talkbank">
     </xs:attribute>
 </xs:complexType>
 
-
-
-<xs:element name="r">
-    <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-        <xs:documentation>[x number] in CHAT</xs:documentation>
-        <xs:documentation>
-            <a href="https://talkbank.org/manuals/CHAT.html#MultipleRepetition_Scope">CHAT manual
-            section on this topic...</a>
-        </xs:documentation>
-    </xs:annotation>
-    <xs:complexType mixed="false">
-        <xs:attribute name="times" type="xs:nonNegativeInteger"/>
-    </xs:complexType>
-</xs:element>
 
 
 <xs:complexType name="baseTerminatorType" mixed="false">
@@ -3151,7 +3136,6 @@ elementFormDefault="qualified" version="2.20.0" id="Talkbank">
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                 <xs:element ref="k"/>
                 <xs:element ref="error"/>
-                <xs:element ref="r"/>
                 <xs:element ref="duration"/>
                 <xs:element ref="ga"/>
                 <xs:element ref="overlap"/>
@@ -4006,7 +3990,6 @@ elementFormDefault="qualified" version="2.20.0" id="Talkbank">
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                 <xs:element ref="k"/>
                 <xs:element ref="error"/>
-                <xs:element ref="r"/>
                 <xs:element ref="a"/>
                 <xs:element ref="wor"/>
             </xs:choice>
@@ -4093,7 +4076,6 @@ elementFormDefault="qualified" version="2.20.0" id="Talkbank">
             <xs:choice minOccurs="0" maxOccurs="unbounded">
                 <xs:element ref="k"/>
                 <xs:element ref="error"/>
-                <xs:element ref="r"/>
                 <xs:element ref="a"/>
             </xs:choice>
         </xs:sequence>
