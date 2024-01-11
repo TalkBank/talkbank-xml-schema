@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.talkbank.chatter</groupId>
+    <artifactId>talkbank-xml-schema</artifactId>
+    <version>2.20.1</version>
+
+    <name>talkbank-xml-schema</name>
+    <url>https://talkbank.org</url>
+    <description>
+        XML Schema for the TalkBank System, with generated JAXB code.
+    </description>
+
+    <properties>
+        <java.version>17</java.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <licenses>
+        <!-- fmc -->
+    </licenses>
+
+    <organization>
+        <name>TalkBank System</name>
+        <url>https://www.talkbank.org</url>
+    </organization>
+
+    <developers>
+        <developer>
+            <id>chen</id>
+            <name>Franklin Chen</name>
+            <email>FranklinChen@cmu.edu</email>
+            <organization>Carnegie Mellon University</organization>
+            <timezone>America/New_York</timezone>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.sun.xml.bind</groupId>
+            <artifactId>jaxb-impl</artifactId>
+            <version>4.0.4</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jvnet.jaxb</groupId>
+                <artifactId>jaxb-maven-plugin</artifactId>
+                <version>4.0.0</version>
+                <executions>
+                    <execution>
+                        <id>generate</id>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <strict>false</strict>
+                            <extension>true</extension>
+                            <args>
+                                <arg>-Xlocator</arg>
+                            </args>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.jvnet.jaxb</groupId>
+                <artifactId>jaxb2-basics</artifactId>
+                <version>4.0.0</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
