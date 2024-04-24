@@ -6,7 +6,7 @@
 
     <groupId>org.talkbank.chatter</groupId>
     <artifactId>talkbank-xml-schema</artifactId>
-    <version>2.20.1</version>
+    <version>2.20.2-SNAPSHOT</version>
 
     <name>talkbank-xml-schema</name>
     <url>https://talkbank.org</url>
@@ -44,7 +44,7 @@
         <repository>
             <id>github</id>
             <name>GitHub TalkBank Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/TalkBank/talkbank-xml-schema</url>
+            <url>https://maven.pkg.github.com/ghedlund/talkbank-xml-schema</url>
         </repository>
     </distributionManagement>
 
