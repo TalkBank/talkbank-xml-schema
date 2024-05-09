@@ -3,7 +3,7 @@
 xmlns:xml="http://www.w3.org/XML/1998/namespace"
 
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tb="http://www.talkbank.org/ns/talkbank" xmlns="http://www.talkbank.org/ns/talkbank" xmlns:xhtml="http://www.w3.org/1999/xhtml" targetNamespace="http://www.talkbank.org/ns/talkbank" elementFormDefault="qualified" version="2.20.2" id="Talkbank">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tb="http://www.talkbank.org/ns/talkbank" xmlns="http://www.talkbank.org/ns/talkbank" xmlns:xhtml="http://www.w3.org/1999/xhtml" targetNamespace="http://www.talkbank.org/ns/talkbank" elementFormDefault="qualified" version="2.20.3" id="Talkbank">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
   <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
     <xs:documentation> A full definition of the CHAT format. </xs:documentation>
@@ -1311,21 +1311,8 @@ xmlns:xml="http://www.w3.org/XML/1998/namespace"
           <xs:element ref="underline"/>
           <xs:element ref="italic"/>
         </xs:choice>
-        <!--
-                    Can optionally have one of actual or model.
-                    Order does not matter.
-                -->
-        <xs:choice minOccurs="0">
-          <xs:sequence>
-            <xs:element ref="actual"/>
-            <xs:element ref="model" minOccurs="0"/>
-          </xs:sequence>
-          <xs:sequence>
-            <xs:element ref="model"/>
-            <xs:element ref="actual" minOccurs="0"/>
-          </xs:sequence>
-        </xs:choice>
-        <xs:element ref="align" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="model" minOccurs="0" maxOccurs="1"/>
+        <xs:element ref="actual" minOccurs="0" maxOccurs="1"/>               <xs:element ref="align" minOccurs="0" maxOccurs="1"/>
       </xs:sequence>
     </xs:complexType>
     <xs:unique name="model_ph_key">
