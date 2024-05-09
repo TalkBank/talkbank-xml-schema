@@ -1,0 +1,11 @@
+Changes
+
+* 2.20.3
+Change XML Schema to require "model" before "actual".
+Add xml.xsd and catalog.xml.
+
+* 2.20.2
+Add more CA elements:
+   ['hurried start', "\x{2907}", "HurriedStart"],
+   ['sudden stop', "\x{2906}", "SuddenStop"],
+   ['hardening', "\x{2051}", "Hardening"],

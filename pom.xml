@@ -69,8 +69,12 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
+                            <catalog>src/main/resources/catalog.xml</catalog>
                             <strict>false</strict>
                             <extension>true</extension>
+                            <schemaIncludes>
+                                <include>talkbank.xsd</include>
+                            </schemaIncludes>
                             <args>
                                 <arg>-Xlocator</arg>
                             </args>
