@@ -1,5 +1,10 @@
 Changes
 
+* 3.0.0
+Huge changes to Phon-relevant constructs.
+
+Phon is https://github.com/phon-ca/phon
+
 * 2.20.3
 Change XML Schema to require "model" before "actual".
 Add xml.xsd and catalog.xml.
