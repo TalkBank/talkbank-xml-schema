@@ -1,5 +1,11 @@
 Changes
 
+* 3.0.1
+<langs> has attribute hebrew for form type
+<w> has attribute hebrew for form type
+
+Remove @a and @e and @nv.
+
 * 3.0.0
 Huge changes to Phon-relevant constructs.
 
