@@ -3,7 +3,7 @@
 xmlns:xml="http://www.w3.org/XML/1998/namespace"
 
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tb="http://www.talkbank.org/ns/talkbank" xmlns="http://www.talkbank.org/ns/talkbank" xmlns:xhtml="http://www.w3.org/1999/xhtml" targetNamespace="http://www.talkbank.org/ns/talkbank" elementFormDefault="qualified" version="3.0.0" id="Talkbank">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tb="http://www.talkbank.org/ns/talkbank" xmlns="http://www.talkbank.org/ns/talkbank" xmlns:xhtml="http://www.w3.org/1999/xhtml" targetNamespace="http://www.talkbank.org/ns/talkbank" elementFormDefault="qualified" version="3.0.1" id="Talkbank">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
   <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
     <xs:documentation> A full definition of the CHAT format. </xs:documentation>
@@ -730,6 +730,15 @@ xmlns:xml="http://www.w3.org/XML/1998/namespace"
           </xs:annotation>
         </xs:element>
       </xs:choice>
+    <xs:attribute name="hebrew" type="xs:boolean">
+      <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+        <xs:documentation> Whether @s or ׀ס was used </xs:documentation>
+        <xs:documentation>
+          <a href="https://talkbank.org/manuals/CHAT.html#TODO">CHAT manual
+                        section on this topic...</a>
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
     </xs:complexType>
   </xs:element>
   <xs:element name="linker">
@@ -2638,6 +2647,15 @@ xmlns:xml="http://www.w3.org/XML/1998/namespace"
           </xs:documentation>
         </xs:annotation>
       </xs:attribute>
+    <xs:attribute name="hebrew" type="xs:boolean">
+      <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
+        <xs:documentation> Whether @ or ׀ was used </xs:documentation>
+        <xs:documentation>
+          <a href="https://talkbank.org/manuals/CHAT.html#TODO">CHAT manual
+                        section on this topic...</a>
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
       <xs:attribute name="user-special-form" type="xs:string">
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation>@z:code user-specified code</xs:documentation>
@@ -2666,15 +2684,6 @@ xmlns:xml="http://www.w3.org/XML/1998/namespace"
         </xs:annotation>
         <xs:simpleType>
           <xs:restriction base="xs:string">
-            <xs:enumeration value="addition">
-              <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-                <xs:documentation>@a</xs:documentation>
-                <xs:documentation>
-                  <a href="https://talkbank.org/manuals/CHAT.html#Addition_Marker">CHAT manual
-                                        section on this topic...</a>
-                </xs:documentation>
-              </xs:annotation>
-            </xs:enumeration>
             <xs:enumeration value="babbling">
               <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
                 <xs:documentation>@b</xs:documentation>
@@ -2698,15 +2707,6 @@ xmlns:xml="http://www.w3.org/XML/1998/namespace"
                 <xs:documentation>@d</xs:documentation>
                 <xs:documentation>
                   <a href="https://talkbank.org/manuals/CHAT.html#DialectForm_Marker">CHAT
-                                        manual section on this topic...</a>
-                </xs:documentation>
-              </xs:annotation>
-            </xs:enumeration>
-            <xs:enumeration value="echolalia">
-              <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-                <xs:documentation>@e</xs:documentation>
-                <xs:documentation>
-                  <a href="https://talkbank.org/manuals/CHAT.html#EcholaliaForm_Marker">CHAT
                                         manual section on this topic...</a>
                 </xs:documentation>
               </xs:annotation>
