@@ -6,7 +6,7 @@
 
     <groupId>org.talkbank.chatter</groupId>
     <artifactId>talkbank-xml-schema</artifactId>
-    <version>3.0.1</version>
+    <version>3.1.0</version>
 
     <name>talkbank-xml-schema</name>
     <url>https://talkbank.org</url>
