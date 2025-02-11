@@ -1,5 +1,11 @@
 Changes
 
+* 3.2.0
+Reverse Hebrew-related additions from 3.0.1: remove attribute hebrew from <langs> and <w>
+
+* 3.1.0
+Remove separated-prefix attribute from <w>.
+
 * 3.0.1
 <langs> has attribute hebrew for form type
 <w> has attribute hebrew for form type
