@@ -3,7 +3,7 @@
 xmlns:xml="http://www.w3.org/XML/1998/namespace"
 
 -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tb="http://www.talkbank.org/ns/talkbank" xmlns="http://www.talkbank.org/ns/talkbank" xmlns:xhtml="http://www.w3.org/1999/xhtml" targetNamespace="http://www.talkbank.org/ns/talkbank" elementFormDefault="qualified" version="3.2.0" id="Talkbank">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tb="http://www.talkbank.org/ns/talkbank" xmlns="http://www.talkbank.org/ns/talkbank" xmlns:xhtml="http://www.w3.org/1999/xhtml" targetNamespace="http://www.talkbank.org/ns/talkbank" elementFormDefault="qualified" version="3.2.1" id="Talkbank">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
   <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
     <xs:documentation> A full definition of the CHAT format. </xs:documentation>
@@ -1708,6 +1708,7 @@ xmlns:xml="http://www.w3.org/XML/1998/namespace"
       <xs:element ref="lig" minOccurs="1" maxOccurs="1"/>
       <xs:element ref="ph" minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
+    <xs:attribute name="scType" type="syllableConstituentType"/>
   </xs:complexType>
   <xs:simpleType name="syllableConstituentType">
     <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
