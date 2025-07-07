@@ -1,5 +1,8 @@
 Changes
 
+* 3.2.1
+Add scType to compound phones.
+
 * 3.2.0
 Reverse Hebrew-related additions from 3.0.1: remove attribute hebrew from <langs> and <w>
 
