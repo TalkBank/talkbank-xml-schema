@@ -6,7 +6,7 @@
 
     <groupId>org.talkbank.chatter</groupId>
     <artifactId>talkbank-xml-schema</artifactId>
-    <version>3.2.1</version>
+    <version>3.2.2</version>
 
     <name>talkbank-xml-schema</name>
     <url>https://talkbank.org</url>
@@ -15,9 +15,8 @@
     </description>
 
     <properties>
-        <java.version>17</java.version>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <java.version>25</java.version>
+        <maven.compiler.release>25</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -52,7 +51,12 @@
         <dependency>
             <groupId>com.sun.xml.bind</groupId>
             <artifactId>jaxb-impl</artifactId>
-            <version>4.0.5</version>
+            <version>4.0.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jvnet.jaxb</groupId>
+            <artifactId>jaxb-plugins-runtime</artifactId>
+            <version>4.0.11</version>
         </dependency>
     </dependencies>
 
@@ -61,7 +65,7 @@
             <plugin>
                 <groupId>org.jvnet.jaxb</groupId>
                 <artifactId>jaxb-maven-plugin</artifactId>
-                <version>4.0.8</version>
+                <version>4.0.9</version>
                 <executions>
                     <execution>
                         <id>generate</id>
@@ -76,8 +80,21 @@
                                 <include>talkbank.xsd</include>
                             </schemaIncludes>
                             <args>
+                                <arg>-Xvalue-constructor</arg>
+                                <arg>-Xjaxbindex</arg>
+                                <arg>-XenumValue</arg>
+                                <arg>-Xsetters</arg>
+                                <arg>-Xsetters-mode=direct</arg>
+                                <arg>-XtoString</arg>
                                 <arg>-Xlocator</arg>
                             </args>
+                            <plugins>
+                                <plugin>
+                                    <groupId>org.jvnet.jaxb</groupId>
+                                    <artifactId>jaxb-plugins</artifactId>
+                                    <version>4.0.9</version>
+                                </plugin>
+                            </plugins>
                         </configuration>
                     </execution>
                 </executions>

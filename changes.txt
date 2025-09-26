@@ -1,5 +1,8 @@
 Changes
 
+* 3.2.2
+Add form marker @ls.
+
 * 3.2.1
 Add scType to compound phones.
 
