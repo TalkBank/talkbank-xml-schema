@@ -2639,15 +2639,6 @@ xmlns:xml="http://www.w3.org/XML/1998/namespace"
           </xs:documentation>
         </xs:annotation>
       </xs:attribute>
-      <xs:attribute name="formSuffix" type="xs:string">
-        <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
-          <xs:documentation>-s and similar after a form marker</xs:documentation>
-          <xs:documentation>
-            <a href="https://talkbank.org/0info/manuals/CHAT.html#Special_Form_Suffix">CHAT manual
-                            section on this topic...</a>
-          </xs:documentation>
-        </xs:annotation>
-      </xs:attribute>
       <xs:attribute name="formType">
         <xs:annotation xmlns="http://www.w3.org/1999/xhtml">
           <xs:documentation> Form marker: an attribute for a word. </xs:documentation>
